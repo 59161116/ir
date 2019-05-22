@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<head>
+<title>Rank</title>
+ 
+<style>
+  .content-table{
+		border-collapse: collapse
+		
+	}
+	.content-table  th{
+		min-width: 100px;
+    min-height: 100px;
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		background-color: #3a6070;
+ 		color: #FFF;
+	}
+	
+	.content-table  td{
+		
+		border: 1px solid #afafaf;	
+    padding: 4px 8px;
+	}
+	.content-table  tr:nth-of-type(even){
+    background-color: #e7edf0;
+
+  }
+
+  .button1 {
+            background: #3a6070;
+            color: #ffffff;
+            width: 100px;
+            height: 40px;
+            border: 1px solid #16365a;
+            font-size: 18px;
+            border-radius: 4px;
+            transition: .6s;
+            overflow: hidden;
+        }
+
+
+</style>
+
+</head>
+<body>
+
+  
+	
+      
+
+    <table class = "content-table" align="center"  >
+        <tr>
+          <th>No.</th>
+          <th>TF - IDF</th>
+          <th>Link</th>
+        </tr>
+        <tr>
+          <td  align="center">
+              <p>{% for i in range(1,lenurl+1): %}</p>  
+              <p>{{ i }}</p>
+          <p>{% endfor %}</p>  
+          </td>
+          <td  align="center">
+              <p>{% for i in rank1: %}</p> 
+                <p>{% if i[1] != "NOT FOUND": %}</p>  
+                  <p>{{"%.4f"% i[1] }}</p>
+                <p>{%else: %}</p>
+                  <p>{{ i[1] }}</p>
+                <p>{% endif %}</p>   		
+              <p>{% endfor %}</p>
+          </td>
+          <td>
+              <p>{% for i in urlrank: %}</p>  
+                <p><a href = {{i}}>{{ i }}</a></p>
+              <p>{% endfor %}</p>   
+          </td>
+        </tr>
+
+
+    </table>
+
+    
+
+
+        
+
+</body>
+</html>
+        

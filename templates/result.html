@@ -1,0 +1,336 @@
+<html>
+<head>
+	<title> Result form Search </title>
+	
+</head>
+<style>
+	.text1{
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		text-shadow: 3px 3px rgba(0, 0, 0, 0.15);
+		color: #3a6070;
+	}
+	.text2{
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		text-shadow: 3px 3px rgba(0, 0, 0, 0.15);
+		color: #3a6070;
+	}
+	.text3{
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		text-shadow: 3px 3px rgba(0, 0, 0, 0.15);
+		color: #3a6070;
+	}
+	.text4{
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		text-shadow: 3px 3px rgba(0, 0, 0, 0.15);
+		color: #3a6070;
+	}
+
+
+	.content-table{
+		
+		
+		overflow: auto;
+ 		box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.15);
+		
+	}
+	.content-table thead tr{
+		
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		background-color: #3a6070;
+ 		color: #ffffff;
+	}
+	.content-table th,
+	.content-table td {
+		
+		padding: 8px 11px;
+	}
+	.content-table tbody tr{
+		
+		border-bottom: 1px solid #5c5c5c;	
+	}
+	.content-table tbody tr:nth-of-type(even){
+		background-color: 	#f3f3f3;
+	}
+	.content-table tbody tr:last-of-type{
+		border-bottom: 5px solid #3a6070;
+	}
+	.content-table tbody tr.active-row {
+  		font-weight: bold;
+  		color: #068AE4;	
+	}
+
+	.content-table2{
+  		
+  		border-radius: 7px 7px 0 0;
+ 		box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.15);
+	}
+	.content-table2 thead tr{
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		background-color: #3a6070;
+ 		color: #ffffff;
+	}
+	.content-table2 th,
+	.content-table2 td {
+ 		 padding: 8px 11px;
+	}
+	.content-table2 tbody tr{
+		border-bottom: 1px solid #5c5c5c;	
+	}
+	.content-table2 tbody tr:nth-of-type(even){
+		background-color: 	#f3f3f3;
+	}
+	.content-table2 tbody tr:last-of-type{
+		border-bottom: 10px solid #FA861F;
+	}
+	.content-table2 tbody tr.active-row {
+  		font-weight: bold;
+  		color: #FA861F;	
+	}
+
+	.content-table3{
+		
+  		border-radius: 7px 7px 0 0;
+ 		box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.15);
+	}
+	.content-table3 thead tr{
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		background-color: #3a6070;
+ 		color: #ffffff;
+	}
+	.content-table3 th,
+	.content-table3 td {
+ 		 padding: 8px 11px;
+	}
+	.content-table3 tbody tr{
+		border-bottom: 1px solid #5c5c5c;	
+		
+	}
+	.content-table3 tbody tr:nth-of-type(even){
+		background-color: 	#f3f3f3;
+	}
+	.content-table3 tbody tr:last-of-type{
+		border-bottom: 5px solid #B81EFF;
+	}
+	.content-table3 tbody tr.active-row {
+  		font-weight: bold;
+  		color: #B81EFF;	
+	}
+
+	.content-table4{
+		
+  		border-radius: 7px 7px 0 0;
+ 		box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.15);
+	}
+	.content-table4 thead tr{
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		background-color: #3a6070;
+ 		color: #ffffff;
+	}
+	.content-table4 th,
+	.content-table4 td {
+ 		 padding: 8px 11px;
+	}
+	.content-table4 tbody tr{
+		border-bottom: 1px solid #5c5c5c;	
+	}
+	.content-table4 tbody tr:nth-of-type(even){
+		background-color: 	#f3f3f3;
+	}
+	.content-table4 tbody tr:last-of-type{
+		border-bottom: 5px solid #009879;
+	}
+	.content-table4 tbody tr.active-row {
+  		font-weight: bold;
+  		color: #009879;	
+	}
+
+	.headre {
+		border-radius: 7px 7px 0 0;
+	}
+	.headre tr{
+		border-bottom: 1px solid #5c5c5c;
+	}
+
+	.button1 {
+            background: #3a6070;
+            color: #ffffff;
+            width: 100px;
+            height: 40px;
+            border: 1px solid #16365a;
+            font-size: 18px;
+            border-radius: 4px;
+            transition: .6s;
+            overflow: hidden;
+        }
+
+		
+</style>
+
+
+
+
+</head>
+
+<body>
+
+		<h1 class="text1" align="center" > Positive or Negative </h1>
+		<table class="headre" align="center" >		
+				<tr >
+					<td>{{ word}} </td><td> --- this is a  </td><td> [ {{ str1 }} ] </td> <td>Sentiment Sentence</td>
+					
+				</tr>
+			</table>	
+
+
+	
+		
+
+		  
+	
+
+
+	
+	<h1 class="text1" align="center" > Inverted index </h1>
+	<table class="headre" align="center" >		
+			<tr >
+				<td> run  </td><td> {{ resultin1 }} </td>
+				<tr>
+					<td> time   </td><td> {{ retimein }} </td><td> (second)</td>
+				</tr>
+			</tr>
+		</table>	
+	
+	<table class = "content-table"  align="center"  >
+		<thead>
+			<tr> 
+				<th>Link</th> 
+			</tr>
+		</thead>
+		<tbody>
+			{% for key,value in resultin.items(): %}
+			<tr class="active-row">
+			
+				{% for i in  value: %}
+				<tr>
+					<td><a href = {{i}}>{{ i }}</a></td>
+				</tr>
+				{% endfor %}	
+			</tr>		
+			{% endfor %}
+		</tbody>
+	</table>
+
+
+	
+	<h1 class="text2" align="center" >Position index </h1>
+	<table  align="center" >		
+			<tr>
+				<td> run   </td><td> {{ resultpo1 }} </td><td> </td>
+				<tr>
+					<td> time   </td><td> {{ retimepo }} </td><td> (second)</td>
+				</tr>
+			</tr>
+		</table>	
+	
+	<table class = "content-table2" align="center" cellspacing = "1" >
+		<thead>
+			<tr> 
+				<th>Link</th> 
+			</tr>
+		</thead>
+		<tbody>
+			{% for key,value in resultpo.items(): %}
+			<tr class="active-row">
+			
+				{% for i in  value: %}
+				<tr>
+					<td><a href = {{i}}>{{ i }}</a></td>
+				</tr>
+				{% endfor %}	
+			</tr>		
+			{% endfor %}
+		</tbody>
+	</table>
+
+
+
+		
+	<h1 class="text3" align="center" >Hash </h1>
+	<table  align="center" >		
+			<tr>
+				<td> run   </td><td> {{ resulthash1 }} </td><td> </td>
+				<tr>
+					<td> time   </td><td> {{ retimehash }} </td><td> (second)</td>
+				</tr>
+			</tr>
+		</table>	
+	
+	<table class = "content-table3" align="center" cellspacing = "1" >
+		<thead>
+			<tr> 
+				<th>Link</th> 
+			</tr>
+		</thead>
+		<tbody>
+			{% for key,value in resulthash.items(): %}
+			<tr class="active-row">
+			
+				{% for i in  value: %}
+				<tr>
+					<td><a href = {{i}}>{{ i }}</a></td>
+				</tr>
+				{% endfor %}	
+			</tr>		
+			{% endfor %}
+		</tbody>
+	</table>
+
+
+
+
+
+	<h1 class="text4" align="center" >Binary search tree</h1>
+	<table  align="center" >		
+			<tr>
+				<td> run   </td><td> {{ resulttree1 }} </td><td> </td>
+				<tr>
+					<td> time  </td><td> {{ retimetree }} </td><td> (second)</td>
+				</tr>
+			</tr>
+		</table>	
+	
+	<table class = "content-table4" align="center" cellspacing = "1" >
+		<thead>
+			<tr> 
+				<th>Link</th> 
+			</tr>
+		</thead>
+		<tbody>
+			{% for key,value in resulttree.items(): %}
+			<tr clasherfs="active-row">
+			
+				{% for i in  value: %}
+				<tr>
+					<td><a href = {{i}}>{{ i }}</a></td>
+				</tr>
+				{% endfor %}	
+			</tr>		
+			{% endfor %}
+		</tbody>
+	</table>
+
+
+	<form action="http://seashore.informatics.buu.ac.th/~59161116/PROJECT/MyApp/templates/Rank" method="POST" align="center" >
+
+  
+
+		<input id="search" type="hidden" name="Search" value="{{word}}"/>
+		<h2><input class="button1" type="button" value="Rank" onClick="this.form.action='http://seashore.informatics.buu.ac.th/~59161116/PROJECT/MyApp/templates/Rank'; submit()" formmethod="post"></h2>
+	  </form>
+
+			
+
+
+</body>
+</html>
+	
